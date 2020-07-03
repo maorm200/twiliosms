@@ -16,8 +16,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/sms', (req, res) => {
+    const text = req.body.textToMaor;
     client.messages.create({
-        body: req.body.textToMaor,
+        body: text,
         from: numberFrom,
         to: numberTo
     }).then(message => console.log('Message sent successfully', message.body));
