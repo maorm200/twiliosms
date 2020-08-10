@@ -22,6 +22,9 @@ app.post('/sms', (req, res) => {
         from: numberFrom,
         to: numberTo
     }).then(message => console.log('Message sent successfully', message.body));
+    // checking if this branch works
+    // this should work
+    // more changes
     res.redirect('/success')
 });
 
